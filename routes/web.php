@@ -1,6 +1,8 @@
 <?php
 
+use App\Http\Controllers\LayoutController;
 use Illuminate\Support\Facades\Route;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -13,6 +15,12 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+// Route::get('/', function () {
+//     return view('welcome');
+// });
+
+// Route::get('/index', function () {
+//     return view('index');
+// });
+
+Route::get('/index', [LayoutController::class, 'index']);
