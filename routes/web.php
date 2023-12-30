@@ -1,6 +1,6 @@
 <?php
 
-use App\Http\Controllers\LayoutController;
+use App\Http\Controllers\RotasController;
 use Illuminate\Support\Facades\Route;
 
 
@@ -15,12 +15,6 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-// Route::get('/', function () {
-//     return view('welcome');
-// });
-
-// Route::get('/index', function () {
-//     return view('index');
-// });
-
-Route::get('/index', [LayoutController::class, 'index']);
+Route::get('/index', [RotasController::class, 'index']);
+Route::get('/cadastro', [RotasController::class, 'cadastro']);
+Route::get('/login', [RotasController::class, 'login']);

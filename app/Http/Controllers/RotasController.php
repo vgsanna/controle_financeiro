@@ -8,15 +8,23 @@ use Illuminate\Routing\Controller as BaseController;
 
 use App\Models\Usuarios;
 
-class LayoutController extends BaseController
+class RotasController extends BaseController
 {
     use AuthorizesRequests, ValidatesRequests;
 
     public function index()
     {
-        $usuarios = Usuarios::find(1);
-        echo $usuarios;
         return view('index');
+    }
+
+    public function cadastro()
+    {
+        return view('cadastro');
+    }
+
+    public function login()
+    {
+        return view('login');
     }
     
 }
