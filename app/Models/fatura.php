@@ -5,7 +5,9 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class fatura extends Model
+class Fatura extends Model
 {
     use HasFactory;
+
+    protected $fillable = ['id', 'id_cartao', 'mes', 'ano', 'e_excluido'];
 }
