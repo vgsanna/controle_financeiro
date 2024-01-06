@@ -18,14 +18,24 @@
                 <form method="POST" action="{{route('loginRoute')}}">
                   @csrf
                   <h5 class="fw-normal mb-3 pb-3" style="letter-spacing: 1px;">Login</h5>
-
+                  
+                  @if ($errors->any())
+                      <div class="alert alert-danger">
+                          <ul>
+                              @foreach ($errors->all() as $error)
+                                  <li>{{ $error }}</li>
+                              @endforeach
+                          </ul>
+                      </div>
+                  @endif
+                  
                   <div class="form-outline mb-4">
-                    <input type="email" id="email" name = "email" class="form-control form-control-lg" />
+                    <input type="email" id="email" name = "email" class="form-control form-control-lg" value="{{ old('email') }}" />
                     <label class="form-label" for="email">Email</label>
                   </div>
 
                   <div class="form-outline mb-4">
-                    <input type="password" id="senha" name = "senha" class="form-control form-control-lg" />
+                    <input type="password" id="senha" name = "senha" class="form-control form-control-lg " value="{{ old('senha') }}" />
                     <label class="form-label" for="senha">Senha</label>
                   </div>
 

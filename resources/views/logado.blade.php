@@ -1,7 +1,8 @@
 @include('layouts/html')
 <body>
-@include('layouts/header')
-{{ $dados['email'] }}
-{{ $dados['senha'] }}
+@include('layouts/header_logado')
+{{ $dados['nomeUsuario'] }}
+{{ $dados['emailUsuario'] }}
+
 </body>
 </html>

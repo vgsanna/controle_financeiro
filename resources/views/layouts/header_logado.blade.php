@@ -5,7 +5,9 @@
       </a>
 
       <ul class="nav nav-pills">
-        <li class="nav-item"><a href="/login" class="nav-link active" aria-current="page">Login</a></li>
-        <li class="nav-item"><a href="/cadastro" class="nav-link">Cadastro</a></li>
+        
+        <li class="nav-item"><a href="/cadastro" class="nav-link">Olá {{ $dados['nomeUsuario'] }}</a></li>
+        <li class="nav-item"><a href="/login" class="nav-link active" aria-current="page">Sair</a></li>
+        <li class="nav-item"><a href="/cadastro" class="nav-link"></a></li>
       </ul>
 </header>

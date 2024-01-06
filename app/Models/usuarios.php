@@ -16,7 +16,15 @@ class Usuarios extends Model
         return $this
             ->where('email', $email)
             ->where('senha',$senha)
-            ->get(['nome', 'email', 'senha'])
+            ->get(['id'])
+            ->toArray();
+    }
+    
+    public function retornaDadosPorEmail($email)
+    {
+        return $this
+            ->where('email', $email)
+            ->get(['id', 'nome', 'endereco', 'email'])
             ->toArray();
     }
 }
