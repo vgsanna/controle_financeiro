@@ -15,22 +15,22 @@
             <div class="col-md-6 col-lg-7 d-flex align-items-center">
               <div class="card-body p-4 p-lg-5 text-black">
 
-                <form>
-
+                <form method="POST" action="{{route('loginRoute')}}">
+                  @csrf
                   <h5 class="fw-normal mb-3 pb-3" style="letter-spacing: 1px;">Login</h5>
 
                   <div class="form-outline mb-4">
-                    <input type="email" id="form2Example17" class="form-control form-control-lg" />
-                    <label class="form-label" for="form2Example17">Email</label>
+                    <input type="email" id="email" name = "email" class="form-control form-control-lg" />
+                    <label class="form-label" for="email">Email</label>
                   </div>
 
                   <div class="form-outline mb-4">
-                    <input type="password" id="form2Example27" class="form-control form-control-lg" />
-                    <label class="form-label" for="form2Example27">Senha</label>
+                    <input type="password" id="senha" name = "senha" class="form-control form-control-lg" />
+                    <label class="form-label" for="senha">Senha</label>
                   </div>
 
                   <div class="pt-1 mb-4">
-                    <button class="btn btn-dark btn-lg btn-block" type="button">Login</button>
+                    <button class="btn btn-dark btn-lg btn-block" type="submit" >Login</button>
                   </div>
 
                   <a class="small text-muted" href="#!">Esqueceu a Senha?</a>

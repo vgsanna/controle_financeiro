@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\RotasController;
+use App\Http\Controllers\LoginController;
 use Illuminate\Support\Facades\Route;
 
 
@@ -18,3 +19,4 @@ use Illuminate\Support\Facades\Route;
 Route::get('/index', [RotasController::class, 'index']);
 Route::get('/cadastro', [RotasController::class, 'cadastro']);
 Route::get('/login', [RotasController::class, 'login']);
+Route::post('/post', [LoginController::class, 'login'])->name('loginRoute');
